@@ -17,11 +17,17 @@ string encrypt(string text, int key)
 
 int main()
 {
-	string text = "STILLWATERSRUNDE";
-	int key = 17;
-	cout << "Text : " << text;
+	string input;
+	int key;
+	
+	cout << "Nhap input: ";
+	cin >> input;
+	cout << "Nhap key: ";
+	cin >> key;
+	
+	cout << "\nInput : " << input;
 	cout << "\nKey: " << key;
-	cout << "\nCipher: " << encrypt(text, key);
+	
+	cout << "\nCipher: " << encrypt(input, key);
 	return 0;
 }
-
