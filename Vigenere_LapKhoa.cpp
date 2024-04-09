@@ -28,7 +28,7 @@ string VigenereEncryption(string input, string key){
 	int p, k, c, m = key.length();
 	
 	for(int i = 0; i < input.length(); i++){
-		p =  position(input[i]);
+		p = position(input[i]);
 		k = position(key[i%m]);
 		c = (p+k) % 26;
 		cipher += alphabet[c];
@@ -55,6 +55,9 @@ int main()
 	cout << "New Key: " << newKey << endl;
 	
 	string res = VigenereEncryption(input, newKey);
+	
+	// Chuyen sang chu in hoa
+	transform(res.begin(), res.end(), res.begin(), ::toupper);
 	
 	cout << "Vigenere Encryption: " << res << endl;
 }
