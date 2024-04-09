@@ -2,7 +2,7 @@
 
 using namespace std;
 
-string alphabet = "abcdefghijklmnopqrstuvwxyz";
+string alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 
 string repeatKey(string input, string key){
 	string newKey = key; 
@@ -55,9 +55,6 @@ int main()
 	cout << "New Key: " << newKey << endl;
 	
 	string res = VigenereEncryption(input, newKey);
-	
-	// Chuyen sang chu in hoa
-	transform(res.begin(), res.end(), res.begin(), ::toupper);
 	
 	cout << "Vigenere Encryption: " << res << endl;
 }
