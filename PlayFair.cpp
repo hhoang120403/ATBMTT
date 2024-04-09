@@ -1,9 +1,5 @@
 #include<bits/stdc++.h>
-#define ll long long
-#define MAX 1e9+7
-#define MIN -1e9+7
-#define f first
-#define s second
+
 using namespace std;
 
 string arrKey = "";
