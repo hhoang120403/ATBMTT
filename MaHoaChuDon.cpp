@@ -1,11 +1,7 @@
 #include<bits/stdc++.h>
-#define ll long long
-#define MAX 1e9+7
-#define MIN -1e9+7
-#define f first
-#define s second
 
 using namespace std;
+
 map<char, char>M;
 
 void reverKey(string key){
@@ -22,12 +18,12 @@ string monoalphabeticEncyption(string input, string key){
 
 bool checkKey(string key){
 	if(key.length() != 26) return false;
-	map<char, bool> M;
+	map<char, bool> check;
 	for(int i = 0; i < key.length(); i++){
-		if(M[key[i]] == false){
-			M[key[i]] = true;
+		if(check[key[i]] == false){
+			check[key[i]] = true;
 		}
-		else if(M[key[i]] == true){
+		else if(check[key[i]] == true){
 			return false;
 		}
 	}
@@ -36,15 +32,20 @@ bool checkKey(string key){
 
 int main()
 {
-	string input, key, output="";
+	string input, key, res = "";
+	
+	cout << "Nhap input: ";
 	cin >> input; 
+	cout << "Nhap key: ";
 	cin >> key; 
+	
 	if(checkKey(key) == false){
 		cout << "Key khong hop le";
 		return 0;
 	}
 	
-    cout << "Input: " << input << "\nKey: " << key << endl;
-	output = monoalphabeticEncyption(input, key);
-	cout<<"Ma hoa chu don: "<<output<<endl;
+    cout << "\nInput: " << input << "\nKey: " << key << endl;
+    
+	res = monoalphabeticEncyption(input, key);
+	cout << "\nMonoAlphabetic Encyption: " << res << endl;
 }
