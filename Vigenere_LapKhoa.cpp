@@ -24,6 +24,7 @@ int position(char c){
 	return c - 'A';
 } 
 
+// i % m giúp chúng ta lặp lại sử dụng key nhiều lần khi mã hóa toàn bộ chuỗi input.
 string VigenereEncryption(string input, string key){
 	string cipher = "";
 	int p, k, c, m = input.length();
