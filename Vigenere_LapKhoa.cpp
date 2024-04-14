@@ -26,11 +26,11 @@ int position(char c){
 
 string VigenereEncryption(string input, string key){
 	string cipher = "";
-	int p, k, c;
+	int p, k, c, m = input.length();
 	
 	for(int i = 0; i < input.length(); i++){
 		p = position(input[i]);
-		k = position(key[i]);
+		k = position(key[i%m]);
 		c = (p+k) % 26;
 		cipher += alphabet[c];
 	} 
