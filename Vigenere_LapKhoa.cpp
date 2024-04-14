@@ -18,6 +18,7 @@ string repeatKey(string input, string key){
 	return newKey; 
 } 
 
+// Tim vi tri trong bang chu cai
 int position(char c){
 	if(c > 'Z') return c - 'a';
 	return c - 'A';
